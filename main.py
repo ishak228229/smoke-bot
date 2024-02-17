@@ -35,8 +35,6 @@ def perekur(message: str) -> None:
         connection.commit()
 
     global username_call
-    global username
-    username = message.from_user.username
 
     cht = message.chat.id
 
@@ -96,9 +94,13 @@ def stats(message: str) -> None:
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback(call: str) -> None:
+    global username
+
     cht = call.message.chat.id
 
     if call.data == 'yes':
+        username = call.from_user.username
+        print(username)
         bot.send_message(cht, f'Вельмишановний <b>@{username_call}</b>, я, @{username}, залишаю усі свої "важливі" справи та прямую до тебе!', parse_mode='HTML')
     elif call.data == 'no':
         bot.send_message(cht, f'-')
