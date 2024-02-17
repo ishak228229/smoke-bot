@@ -1,4 +1,4 @@
-TOKEN = '6884103296:AAHPYJFqIxn_jCFmTyonrYZiKWoCIiSPAiE'
+TOKEN = '6983940402:AAH3t8xQsMsnyqnuTRKNB-7BXz7IgHTrQxA'
 
 HOST = 'viaduct.proxy.rlwy.net'
 USER = 'root'
